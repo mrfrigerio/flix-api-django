@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from genres.views import genre_list
+
 urlpatterns = [
-    path('admin/', admin.site.urls)
+    path("admin/", admin.site.urls),
+    path("genres/", genre_list, name="genre-list"),
 ]
